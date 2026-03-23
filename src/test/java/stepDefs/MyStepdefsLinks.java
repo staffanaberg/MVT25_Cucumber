@@ -34,7 +34,7 @@ public class MyStepdefsLinks {
 
     @When("I click on {string}")
     public void iClickOn(String linkText) throws InterruptedException {
-        WebElement element = driver.findElement(By.linkText(linkText));
+        WebElement element = driver.findElement(By.cssSelector("[class='list'] > li:nth-child(" +linkText +") > a"));
         element.click();
     }
 

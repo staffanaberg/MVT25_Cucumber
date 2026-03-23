@@ -14,10 +14,10 @@ public class SeleniumLinks {
     public void testBooks() {
         WebDriver driver = new ChromeDriver();
         driver.get("https://demowebshop.tricentis.com/");
-        WebElement element = driver.findElement(By.linkText("Books"));
+        WebElement element = driver.findElement(By.cssSelector("[class='list'] > li:nth-child(3) > a"));
         element.click();
         String actual = driver.getTitle();
-        String expected = "Demo Web Shop. Books";
+        String expected = "Demo Web Shop. Computers";
 
         assertEquals(expected, actual);
         driver.close();
