@@ -39,10 +39,10 @@ public class MyStepdefsLinks {
     }
 
     @Then("I am on the page {string}")
-    public void iAmOnThePage(String expected) throws InterruptedException {
+    public void iAmOnThePage(String title) {
         String actual = driver.getTitle();
 
-        assertEquals(expected, actual);
+        assertEquals(title, actual);
 
     }
 }
